@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adopt a Puppy - PupWeb</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/adopt.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PupWeb</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h2>Free Puppies to Adopt</h2>
+        <p>
+          Give a loving home to a puppy in need. All puppies listed here are
+          available for free adoption!
+        </p>
+      </section>
+      <section id="adopt-list" class="puppy-list">
+        <!-- Free puppy cards will be rendered here by JavaScript -->
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 PupWeb. All rights reserved.</p>
+    </footer>
+
+    <div id="paw-loading" style="display: none">
+      <div class="paw-loading-overlay">
+        <div class="paw-trail">
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Filter only free puppies from the main data
+      const puppies = [
+        {
+          name: "Sky (Male)",
+          breed: "French Bulldog",
+          price: 0,
+          rare: false,
+          image: "images/frenchie1.jpg",
+        },
+        {
+          name: "Prim (Male)",
+          breed: "French Bulldog",
+          price: 0,
+          rare: false,
+          image: "images/frenchie2.jpg",
+        },
+        {
+          name: "Oreo (Male)",
+          breed: "French Bulldog",
+          price: 0,
+          rare: false,
+          image: "images/frenchie3.jpg",
+        },
+        {
+          name: "Gigi (Female)",
+          breed: "French Bulldog",
+          price: 0,
+          rare: false,
+          image: "images/frenchie4.jpg",
+        },
+        {
+          name: "Luna (Female)",
+          breed: "French Bulldog",
+          price: 0,
+          rare: false,
+          image: "images/frenchie5.jpg",
+        },
+        {
+          name: "Coco (Female)",
+          breed: "French Bulldog",
+          price: 0,
+          rare: false,
+          image: "images/frenchie6.jpg",
+        },
+      ];
+      function renderAdoptPuppies() {
+        const list = document.getElementById("adopt-list");
+        list.innerHTML = "";
+        puppies.forEach((puppy) => {
+          const card = document.createElement("div");
+          card.className = "puppy-card";
+          card.style.opacity = 1;
+          card.style.transform = "translateY(0)";
+          card.innerHTML = `
+          <img src="${puppy.image}" alt="${puppy.name}">
+          <h3>${puppy.name}</h3>
+          <p>Breed: ${puppy.breed}</p>
+          <p class="free">Free to Adopt</p>
+          <p class="delivery-fee">Delivery Fee: $100</p>
+          <button class="adopt-btn">Adopt</button>
+        `;
+          list.appendChild(card);
+        });
+      }
+      document.addEventListener("DOMContentLoaded", function () {
+        renderAdoptPuppies();
+        // Attach paw loading to adopt buttons
+        function showPawLoading() {
+          document.getElementById("paw-loading").style.display = "block";
+        }
+        function hidePawLoading() {
+          document.getElementById("paw-loading").style.display = "none";
+        }
+        const adoptBtns = document.querySelectorAll(".adopt-btn");
+        adoptBtns.forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            e.preventDefault();
+            showPawLoading();
+            setTimeout(() => {
+              hidePawLoading();
+              window.location.href = "payment-options.html";
+            }, 1200);
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Payment Option - PupWeb</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PupWeb</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="adopt.html">Free Puppies</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <div class="payment-options-container">
+        <h2>Select Payment Method</h2>
+        <div class="payment-options">
+          <div class="payment-option" onclick="goToCheckout('btc')">
+            <span class="icon">&#x20BF;</span>
+            <span>Bitcoin (BTC)</span>
+          </div>
+          <div class="payment-option" onclick="goToCheckout('credit')">
+            <span class="icon">&#128179;</span>
+            <span>Credit Card</span>
+          </div>
+          <div class="payment-option" onclick="goToCheckout('debit')">
+            <span class="icon">&#128179;</span>
+            <span>Debit Card</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 PupWeb. All rights reserved.</p>
+    </footer>
+    <script src="assets/app.js"></script>
+  </body>
+</html>

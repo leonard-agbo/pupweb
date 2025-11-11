@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About PupWeb</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/about.css" />
+  </head>
+  <body>
+    <div class="paw-anim" id="pawAnim"></div>
+    <header>
+      <h1>PupWeb</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="adopt.html">Free Puppies</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+    </header>
+    <main>
+      <div class="about-container">
+        <h2>About PupWeb</h2>
+        <p>
+          <strong>PupWeb</strong> is your trusted online destination for
+          finding, adopting, and purchasing puppies from loving homes and
+          reputable breeders. Our mission is to connect puppy lovers with their
+          perfect furry companions, whether you're looking to adopt for free or
+          purchase a rare breed.
+        </p>
+        <div class="about-features">
+          <div class="feature-card" style="animation-delay: 0.1s">
+            <div class="feature-icon">🐶</div>
+            <div class="feature-title">Wide Selection</div>
+            <div class="feature-desc">
+              Choose from rare and popular breeds, all in one place.
+            </div>
+          </div>
+          <div class="feature-card" style="animation-delay: 0.2s">
+            <div class="feature-icon">🏠</div>
+            <div class="feature-title">Free Adoption</div>
+            <div class="feature-desc">
+              Adopt a puppy for free and give them a loving home.
+            </div>
+          </div>
+          <div class="feature-card" style="animation-delay: 0.3s">
+            <div class="feature-icon">💳</div>
+            <div class="feature-title">Modern Payments</div>
+            <div class="feature-desc">
+              Pay securely with Credit Card, Debit Card, or Bitcoin.
+            </div>
+          </div>
+          <div class="feature-card" style="animation-delay: 0.4s">
+            <div class="feature-icon">🚚</div>
+            <div class="feature-title">Transparent Delivery</div>
+            <div class="feature-desc">
+              Flat $100 delivery fee, no hidden charges.
+            </div>
+          </div>
+          <div class="feature-card" style="animation-delay: 0.5s">
+            <div class="feature-icon">📖</div>
+            <div class="feature-title">Care Resources</div>
+            <div class="feature-desc">
+              Access puppy care guides and resources for new owners.
+            </div>
+          </div>
+          <div class="feature-card" style="animation-delay: 0.6s">
+            <div class="feature-icon">🌟</div>
+            <div class="feature-title">Success Stories</div>
+            <div class="feature-desc">
+              Read real stories from our happy customers and their pups.
+            </div>
+          </div>
+        </div>
+        <p>
+          We believe every puppy deserves a loving home. Our platform is
+          designed to make the process easy, safe, and enjoyable for everyone.
+          Thank you for choosing PupWeb!
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 PupWeb. All rights reserved.</p>
+    </footer>
+    <script>
+      // Floating paw print animation
+      function createPawPrint(left, delay, size) {
+        const paw = document.createElement("span");
+        paw.className = "paw-print";
+        paw.style.left = left + "%";
+        paw.style.animationDelay = delay + "s";
+        paw.style.fontSize = size + "rem";
+        paw.innerHTML = "&#128062;";
+        document.getElementById("pawAnim").appendChild(paw);
+      }
+      for (let i = 0; i < 12; i++) {
+        createPawPrint(
+          Math.random() * 100,
+          Math.random() * 12,
+          1.7 + Math.random() * 1.5
+        );
+      }
+    </script>
+  </body>
+</html>

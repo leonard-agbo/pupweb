@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout - PupWeb</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PupWeb</h1>
+      <nav>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="adopt.html">Free Puppies</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <h2>Checkout</h2>
+        <p>Complete your adoption or purchase here.</p>
+      </section>
+      <section class="checkout-content">
+        <div style="text-align: center; margin: 2rem 0">
+          <p style="font-size: 1.2rem">
+            Ready to complete your adoption or purchase?
+          </p>
+          <a
+            id="proceedPayment"
+            href="simplepayment.html"
+            style="
+              display: inline-block;
+              padding: 0.7rem 2rem;
+              background: #e67e22;
+              color: #fff;
+              border-radius: 6px;
+              font-size: 1.1rem;
+              text-decoration: none;
+            "
+            >Proceed to Card Payment</a
+          >
+        </div>
+        <script>
+          // If puppy details are in sessionStorage, add them to the payment link
+          const paymentBtn = document.getElementById("proceedPayment");
+          if (window.sessionStorage && sessionStorage.getItem("puppyName")) {
+            const name = encodeURIComponent(
+              sessionStorage.getItem("puppyName")
+            );
+            const amount = encodeURIComponent(
+              sessionStorage.getItem("puppyAmount")
+            );
+            paymentBtn.href = `simplepayment.html?puppy=${name}&amount=${amount}`;
+          }
+        </script>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 PupWeb. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

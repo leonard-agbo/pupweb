@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PupWeb - Puppies for Sale & Adoption</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <div id="startup-video-overlay" class="startup-video-overlay">
+      <video
+        id="startup-video"
+        class="startup-video"
+        autoplay
+        muted
+        playsinline
+      >
+        <source src="assets/puppies.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="startup-welcome-text">Welcome to <span>PupWeb</span></div>
+      <button id="skip-video" class="skip-video-btn">Skip</button>
+    </div>
+    <header>
+      <h1>PupWeb</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="adopt.html">Free Puppies</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <!-- Test button for paw loading animation -->
+      <!-- <button
+        id="test-paw-loading"
+        style="
+          margin: 1rem;
+          padding: 0.5rem 1.5rem;
+          font-size: 1.1rem;
+          background: #222;
+          color: #fff;
+          border-radius: 2rem;
+          border: none;
+          cursor: pointer;
+        "
+      >
+        Test Paw Loading Animation
+      </button> -->
+    </header>
+    <main>
+      <section class="hero">
+        <h2>Find Your Perfect Puppy!</h2>
+        <p>Browse rare breeds for sale or adopt a puppy for free.</p>
+      </section>
+      <section id="puppies" class="puppy-list">
+        <!-- Puppy cards will be rendered here by JavaScript -->
+      </section>
+      <section id="guides" class="care-guides">
+        <h2>Puppy Care Guides & Resources</h2>
+        <div class="guides-list">
+          <div class="guide-card">
+            <h3>Feeding Your Puppy</h3>
+            <p>
+              Learn about the best nutrition, feeding schedules, and healthy
+              treats for puppies.
+            </p>
+            <!-- <a href="#" target="_blank">Read More</a> -->
+          </div>
+          <div class="guide-card">
+            <h3>Training Basics</h3>
+            <p>
+              Discover tips for house training, basic commands, and positive
+              reinforcement.
+            </p>
+            <!-- <a href="#" target="_blank">Read More</a> -->
+          </div>
+          <div class="guide-card">
+            <h3>Health & Vaccinations</h3>
+            <p>
+              Find out about essential vaccinations, vet visits, and keeping
+              your puppy healthy.
+            </p>
+            <!-- <a href="#" target="_blank">Read More</a> -->
+          </div>
+          <div class="guide-card">
+            <h3>Grooming & Hygiene</h3>
+            <p>
+              Tips for bathing, brushing, nail trimming, and keeping your puppy
+              clean.
+            </p>
+            <!-- <a href="#" target="_blank">Read More</a> -->
+          </div>
+          <div class="guide-card">
+            <h3>Socialization</h3>
+            <p>
+              Help your puppy become friendly and confident with people and
+              other pets.
+            </p>
+            <!-- <a href="#" target="_blank">Read More</a> -->
+          </div>
+        </div>
+      </section>
+      <section id="success" class="success-stories">
+        <h2>Success Stories</h2>
+        <div class="stories-list">
+          <div class="story-card">
+            <img src="images/Beagle3.jpg" alt="Happy Puppy" />
+            <h3>Max & The Smith Family</h3>
+            <p>
+              Max, a rescued Beagle, found his forever home and now enjoys daily
+              walks and cuddles with the Smiths!
+            </p>
+          </div>
+          <div class="story-card">
+            <img src="images/Samoyed2.jpg" alt="Happy Puppy" />
+            <h3>Luna & Her New Friends</h3>
+            <p>
+              Luna, a rare Samoyed, was adopted and quickly became the star of
+              her neighborhood dog park.
+            </p>
+          </div>
+          <div class="story-card">
+            <img src="images/Shiba.jpg" alt="Happy Puppy" />
+            <h3>Bella's Big Adventure</h3>
+            <p>
+              Bella, a Shiba Inu, found a loving family and now travels on
+              hiking trips all over the country!
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="favicon.png" alt="PupWeb Logo" class="footer-logo" />
+          <span class="footer-title">PupWeb</span>
+        </div>
+        <nav class="footer-nav">
+          <a href="index.html">Home</a>
+          <a href="adopt.html">Adopt</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <div class="footer-social">
+          <!-- <img src="facebook.png" alt="" /> -->
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            title="Facebook"
+            class="footer-social-link"
+            >
+            <img src="facebook.png" alt=""width="25px">
+            <!-- <span aria-hidden="true">&#xf09a;</span></a
+          > -->
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            title="Twitter"
+            class="footer-social-link"
+            >
+            <img src="X.png" alt=""width="25px">
+            <!-- <span aria-hidden="true">&#xf099;</span></a
+          > -->
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            title="Instagram"
+            class="footer-social-link"
+            >
+            <img src="instagram.png" alt=""width="25px">
+            <!-- <span aria-hidden="true">&#xf16d;</span></a
+          > -->
+          <a
+            href="mailto:support@pupweb.com"
+            title="Email"
+            class="footer-social-link"
+            >
+            <img src="gmail.png" alt=""width="25px">
+            <!-- <span aria-hidden="true">&#xf0e0;</span></a
+          > -->
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 PupWeb. All rights reserved.</span>
+        <span class="footer-made"
+          >Made with <span style="color: #e67e22">&#10084;</span> for
+          puppies</span
+        >
+        <span
+          class="footer-counter"
+          id="footer-adopt-counter"
+          title="Puppies adopted so far!"
+        >
+          <svg
+            viewBox="0 0 32 32"
+            width="20"
+            height="20"
+            style="vertical-align: middle; margin-right: 2px"
+          >
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#e67e22" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#e67e22" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#e67e22" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#e67e22" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#e67e22" />
+          </svg>
+          <span id="adopted-count">12,384</span> Adopted!
+        </span>
+      </div>
+    </footer>
+    <!-- Back to Top Floating Paw Button -->
+    <button id="footer-backtotop" title="Back to Top" aria-label="Back to Top">
+      <svg viewBox="0 0 32 32" width="38" height="38">
+        <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+        <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+        <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+        <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+        <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+        <polygon points="16,13 12,19 20,19" fill="#e67e22" />
+      </svg>
+    </button>
+    <!-- Footer Theme Toggle Paw Switcher -->
+    <button
+      id="footer-theme-toggle"
+      title="Toggle Footer Theme"
+      aria-label="Toggle Footer Theme"
+    >
+      <svg viewBox="0 0 32 32" width="32" height="32">
+        <ellipse cx="16" cy="28" rx="7" ry="4" fill="#e67e22" />
+        <ellipse cx="6" cy="16" rx="3" ry="4" fill="#e67e22" />
+        <ellipse cx="26" cy="16" rx="3" ry="4" fill="#e67e22" />
+        <ellipse cx="10" cy="8" rx="2" ry="3" fill="#e67e22" />
+        <ellipse cx="22" cy="8" rx="2" ry="3" fill="#e67e22" />
+        <circle cx="16" cy="16" r="5" fill="#fff" />
+      </svg>
+    </button>
+    <!-- Footer Music Toggle Button -->
+    <button
+      id="footer-music-toggle"
+      title="Toggle Footer Music"
+      aria-label="Toggle Footer Music"
+    >
+      <svg viewBox="0 0 32 32" width="32" height="32">
+        <ellipse cx="16" cy="28" rx="7" ry="4" fill="#27ae60" />
+        <ellipse cx="6" cy="16" rx="3" ry="4" fill="#27ae60" />
+        <ellipse cx="26" cy="16" rx="3" ry="4" fill="#27ae60" />
+        <ellipse cx="10" cy="8" rx="2" ry="3" fill="#27ae60" />
+        <ellipse cx="22" cy="8" rx="2" ry="3" fill="#27ae60" />
+        <g id="music-note">
+          <rect x="20" y="10" width="2" height="10" rx="1" fill="#fff" />
+          <circle cx="21" cy="21" r="2" fill="#fff" />
+        </g>
+      </svg>
+    </button>
+    <script src="assets/app.js"></script>
+    <audio
+      id="footer-music"
+      src="assets/puppy-theme.mp3"
+      loop
+      preload="auto"
+    ></audio>
+    <script>
+      // Back to Top Button logic
+      const backToTopBtn = document.getElementById("footer-backtotop");
+      window.addEventListener("scroll", function () {
+        if (window.scrollY > 200) {
+          backToTopBtn.classList.add("show");
+        } else {
+          backToTopBtn.classList.remove("show");
+        }
+      });
+      backToTopBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+
+      // Footer Theme Toggle logic
+      const themeBtn = document.getElementById("footer-theme-toggle");
+      const siteFooter = document.querySelector(".site-footer");
+      let pawTheme = localStorage.getItem("pawFooterTheme") || "dark";
+      function setFooterTheme(theme) {
+        if (theme === "light") {
+          siteFooter.classList.add("footer-light");
+          pawTheme = "light";
+        } else {
+          siteFooter.classList.remove("footer-light");
+          pawTheme = "dark";
+        }
+        localStorage.setItem("pawFooterTheme", pawTheme);
+      }
+      setFooterTheme(pawTheme);
+      themeBtn.addEventListener("click", function () {
+        setFooterTheme(pawTheme === "dark" ? "light" : "dark");
+        themeBtn.classList.add("paw-toggle-bounce");
+        setTimeout(() => themeBtn.classList.remove("paw-toggle-bounce"), 600);
+      });
+
+      // Live Puppy Adoption Counter (simulated increment)
+      const adoptedCount = document.getElementById("adopted-count");
+      let count = 12384;
+      setInterval(() => {
+        if (Math.random() > 0.7) {
+          count += Math.floor(Math.random() * 3);
+          adoptedCount.textContent = count.toLocaleString();
+        }
+      }, 3500);
+
+      // Random Puppy Fact Tooltip on Logo
+      const puppyFacts = [
+        "Puppies are born blind, deaf, and toothless!",
+        "Dalmatian puppies are born pure white.",
+        "Puppies sleep 15-20 hours a day.",
+        "A puppy’s nose print is as unique as a human fingerprint.",
+        "Puppies love to play and learn best through games!",
+        'The word "puppy" comes from the French word "poupee" (doll).',
+        "Puppies start to wag their tails at about 3 weeks old.",
+      ];
+      const logo = document.querySelector(".footer-logo");
+      let factIndex = 0;
+      logo.addEventListener("mouseenter", function () {
+        factIndex = (factIndex + 1) % puppyFacts.length;
+        logo.setAttribute("title", puppyFacts[factIndex]);
+      });
+      logo.addEventListener("mouseleave", function () {
+        logo.removeAttribute("title");
+      });
+
+      // Footer Music Toggle
+      const musicBtn = document.getElementById("footer-music-toggle");
+      const music = document.getElementById("footer-music");
+      let musicOn = false;
+      musicBtn.addEventListener("click", function () {
+        musicOn = !musicOn;
+        if (musicOn) {
+          music.play();
+          musicBtn.classList.add("music-on");
+        } else {
+          music.pause();
+          musicBtn.classList.remove("music-on");
+        }
+      });
+      // Animate music note
+      musicBtn.addEventListener("mouseenter", function () {
+        musicBtn.classList.add("music-bounce");
+        setTimeout(() => musicBtn.classList.remove("music-bounce"), 700);
+      });
+    </script>
+    <script>
+      // Extra footer bounce and glow on entrance
+      document.addEventListener("DOMContentLoaded", function () {
+        const footer = document.querySelector(".site-footer");
+        if (!footer) return;
+        const bounce = () => {
+          footer.classList.add("footer-bounce");
+          setTimeout(() => footer.classList.remove("footer-bounce"), 1200);
+        };
+        // Use IntersectionObserver for entrance
+        const observer = new window.IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                bounce();
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.2 }
+        );
+        observer.observe(footer);
+
+        // Floating paw prints on footer hover
+        footer.addEventListener("mouseenter", function () {
+          for (let i = 0; i < 3; i++) {
+            const paw = document.createElement("div");
+            paw.className = "footer-paw-print";
+            paw.style.left = 30 + Math.random() * 60 + "%";
+            paw.style.animationDelay = i * 0.15 + Math.random() * 0.1 + "s";
+            footer.appendChild(paw);
+            setTimeout(() => paw.remove(), 1800);
+          }
+        });
+
+        // Ripple effect on social icon click
+        document.querySelectorAll(".footer-social-link").forEach((link) => {
+          link.addEventListener("click", function (e) {
+            const ripple = document.createElement("span");
+            ripple.className = "footer-ripple";
+            ripple.style.left = (e.offsetX || 16) + "px";
+            ripple.style.top = (e.offsetY || 16) + "px";
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+          });
+        });
+
+        // Confetti burst on heart icon click
+        const heart = document.querySelector(
+          '.footer-made span[style*="color:#e67e22"]'
+        );
+        if (heart) {
+          heart.style.cursor = "pointer";
+          heart.addEventListener("click", function (e) {
+            for (let i = 0; i < 18; i++) {
+              const conf = document.createElement("span");
+              conf.className = "footer-confetti";
+              conf.style.left = (e.offsetX || 8) + "px";
+              conf.style.top = (e.offsetY || 8) + "px";
+              conf.style.setProperty(
+                "--conf-angle",
+                i * 20 + Math.random() * 10 + "deg"
+              );
+              conf.style.setProperty(
+                "--conf-color",
+                ["#e67e22", "#fff", "#f5c16c", "#ff7f50", "#f9ca24"][i % 5]
+              );
+              heart.appendChild(conf);
+              setTimeout(() => conf.remove(), 900);
+            }
+          });
+        }
+      });
+    </script>
+    <div id="paw-loading" class="paw-loading-hidden">
+      <div class="paw-loading-overlay">
+        <div class="paw-trail">
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+          <svg class="paw-print" viewBox="0 0 32 32">
+            <ellipse cx="16" cy="28" rx="7" ry="4" fill="#fff" />
+            <ellipse cx="6" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="26" cy="16" rx="3" ry="4" fill="#fff" />
+            <ellipse cx="10" cy="8" rx="2" ry="3" fill="#fff" />
+            <ellipse cx="22" cy="8" rx="2" ry="3" fill="#fff" />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
